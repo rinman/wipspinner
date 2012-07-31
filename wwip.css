@@ -1,0 +1,38 @@
+h1 {
+	font-size: 300%;
+}
+h2 {
+	font-size: 200%;
+	margin-top: 5%;
+	font-weight: normal;
+}
+button {
+	margin-top:25px;
+}
+#spin_cont {
+	width: 50%;
+	margin: auto;
+}
+#spin_wips {
+	padding: 2.5% 0;
+}
+#spinner_winner {
+	text-align: center;
+	padding: 5% 0;
+	margin: auto;
+	width: 90%;
+}
+#spinner_winner h1 {
+	margin: 0;
+}
+#spinner_winner h2 {
+	font-weight: bold;
+}
+.winner {
+	padding: 10% 0;
+	text-align: center;
+}
+.button {
+	margin: auto;
+	margin-top: 25px;
+}

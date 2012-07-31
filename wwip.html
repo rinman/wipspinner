@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<title>Which WIP?</title>
+
+<link type="text/css" href="js/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
+<link type="text/css" href="wwip.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.spinner.js"></script>
+
+<script>
+//var wips = getWips();
+var wips;
+
+$(document).ready(function(){
+
+	$( "button" ).button();
+	$('#spin_button').click( function() {
+		$('#spin_wips').spinner({ item_list : wips });
+	});
+});
+
+
+function getWips(data) {
+	projects = data.projects;
+	
+	wips = $.map(projects, function(ii) {
+				   return (ii.status == 'in-progress' ? ii : null);
+			   });
+}
+
+</script>
+<script src="http://api.ravelry.com/projects/beka13/progress.json?callback=getWips&key=2779038de773a53638139af8ba1c0778588527ad&version=0"></script>
+
+</head>
+<body>
+
+<div id="spin_cont">
+	<h2>Which WIP to work on?</h2>
+	<div id="spin_wips">
+		<div id="spinner_winner" class="spinner"></div>
+	</div>
+	<button id="spin_button" class="button">Spin for WIP</button>	
+</div>
+
+</body>
+</html>

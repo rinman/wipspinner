@@ -1,0 +1,8 @@
+This is a WIP spinner to help me pick out which project to work on when I just can't decide. :)
+
+The spinner starts out fast and gets slower and slower until it stops on a project. I considered adding a sound effect but those can be so annoying that I decided to leave it off.
+
+It's all browser-side code since that's what worked for this project. I used jQuery and jQuery UI.
+
+This is a simple user interface. It really didn't need much more. I kept the colors toned down so as to avoid giving anyone a seizure.
+
